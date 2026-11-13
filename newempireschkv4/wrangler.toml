@@ -1,5 +1,5 @@
 name = "new-empires-amazon"
-main = "deployclodflare-worker.js"
+main = "deployclodflare-wrokers.js"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
 
