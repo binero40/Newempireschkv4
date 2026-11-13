@@ -13,8 +13,8 @@ enabled = true
 
 # KV for rate limiting (optional)
 # [[kv_namespaces]]
-# binding = "RATE_LIMIT"
-# id = "YOUR_KV_ID"
+# binding = "KEYS"
+# id = "5b9c28fc141341c7b21316c7daffa5f9"
 
 [vars]
 ORIGIN = "https://YOUR_VPS_IP:8080"
