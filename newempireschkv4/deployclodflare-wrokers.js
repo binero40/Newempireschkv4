@@ -1,4 +1,4 @@
-const ORIGIN = 'https://TU-IP-8080'; // ← tu IP:puerto real
+const ORIGIN = 'https://74.220.49.0:8080'; // ← tu IP:puerto real
 
 const CACHE_TTL = {
   static: 86400,
