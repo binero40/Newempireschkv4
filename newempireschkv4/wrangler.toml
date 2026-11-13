@@ -6,10 +6,6 @@ compatibility_flags = ["nodejs_compat"]
 [observability]
 enabled = true
 
-[[routes]]
-pattern = "empires.yourdomain.com/*"
-zone_name = "yourdomain.com"
-zone_id = "YOUR_ZONE_ID"
 
 # If using Cloudflare Pages for static + this worker for API:
 # [pages]
