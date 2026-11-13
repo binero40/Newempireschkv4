@@ -1,0 +1,24 @@
+name = "new-empires-amazon"
+main = "deploy/cloudflare-worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[[routes]]
+pattern = "empires.yourdomain.com/*"
+zone_name = "yourdomain.com"
+zone_id = "YOUR_ZONE_ID"
+
+# If using Cloudflare Pages for static + this worker for API:
+# [pages]
+# project_name = "new-empires-amazon"
+
+# KV for rate limiting (optional)
+# [[kv_namespaces]]
+# binding = "RATE_LIMIT"
+# id = "YOUR_KV_ID"
+
+[vars]
+ORIGIN = "https://YOUR_VPS_IP:8080"

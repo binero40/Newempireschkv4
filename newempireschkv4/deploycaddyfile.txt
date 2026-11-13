@@ -1,0 +1,16 @@
+# If deploying on a VPS with Caddy as reverse proxy (alternative to Cloudflare Worker)
+empires.yourdomain.com {
+    reverse_proxy /api/* localhost:8080
+    reverse_proxy /public/* localhost:8080
+    reverse_proxy /admin localhost:8080
+    reverse_proxy / localhost:8080
+    
+    header {
+        X-Frame-Options DENY
+        X-Content-Type-Options nosniff
+        Strict-Transport-Security "max-age=31536000"
+    }
+
+    encode gzip
+    log
+}

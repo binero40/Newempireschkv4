@@ -1,0 +1,25 @@
+{
+  "name": "new-empires-amazon",
+  "version": "1.0.0",
+  "description": "New Empires Amazon - Real CC Checker with Amazon Pay verification",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "deploy": "wrangler pages deploy ./public --project-name=new-empires-amazon",
+    "docker": "docker build -t new-empires-amazon . && docker run -p 8080:8080 -v ./data:/app/data new-empires-amazon"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "better-sqlite3": "^9.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.0",
+    "crypto-js": "^4.2.0",
+    "luhn": "^1.0.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "wrangler": "^3.28.0"
+  }
+}
